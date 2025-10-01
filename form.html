@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+        }
+        h1{
+            text-align: center;
+            padding: 4px 0px;
+        }
+        div{
+            display: flex;
+            width: 30vw;
+            margin: auto;
+            justify-content: center;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        form{
+            padding: 10px 0px;
+        }
+        button{
+            width: 10vw;
+            height: 5vh;
+            margin: auto;
+            background-color: rgb(2, 6, 6);
+            color: white;
+        }
+        .element{
+            width: 25vw;
+            height: 4vh;
+            padding: 0px 2px;
+        }
+        button:hover{
+            background-color: rgb(83, 83, 83);
+            cursor: pointer;
+        }
+        .element:focus{
+            background-color: rgb(246, 246, 246);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>REGISTRATION FORM</h1>
+    <div>
+
+        <form action="/submit" method="POST">
+
+            <label for="name"><b>Name</b></label><br>
+            <input type="text" id="name" class="element" name="name" placeholder="Enter your name"><br><br>
+
+            <label for="email"><b>Email</b></label><br>
+            <input type="email" id="email" class="element" name="email" placeholder="Enter your email"><br><br>
+
+            <label for="date"><b>DOB</b></label><br>
+            <input type="date" id="date" name="date" class="element"><br><br>
+
+            <label for="phone"><b>Contact number</b></label><br>
+            <input type="tel" id="tel" name="tel" class="element" placeholder="Enter your phone no"><br><br>
+
+            <label for="password"><b>Password</b></label><br>
+            <input type="password" id="password" class="element" name="password" placeholder="Enter password"><br><br>
+
+            <label for="cpassword"><b>Confirm Password</b></label><br>
+            <input type="password" id="cpassword" class="element" name="cpassword" placeholder="Confirm Password"><br><br>
+
+            <label><b>Gender</b></label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+
+            <label><b>Course</b></label><br>
+            <input type="checkbox" id="web-development" name="course" value="web-development">
+            <label for="web-development" class="course">Web Development</label><br>
+            
+            <input type="checkbox" id="cpp" name="course" value="cpp">
+            <label for="cpp" class="course">Object Oriented C++</label><br>
+            
+            <input type="checkbox" id="digital" name="course" value="digital">
+            <label for="digital" class="course">Digital System Design</label><br><br>
+
+            <label for="sem"><strong>Semester</strong></label><br>
+            <select class="element"  name="sem" id="sem">
+                <option value="">1st</option>
+                <option value="">3rd</option>
+                <option value="">5th</option>
+                <option value="">7th</option>
+            </select><br><br>
+
+            <button type="submit" class="element">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
