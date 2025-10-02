@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+            font-family: Arial;
+            color: #333333;
+            /* color: #444; */
+        }
+        label, input{
+            display: block;
+            
+        }
+        input{
+            margin-bottom: 10px;
+            width: 17em;
+            height: 1.9em;
+            line-height: 1.9em;
+            padding: 0px 5px;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
+        /* .formContainer{
+            /* border: 2px solid black; */
+            /* width: 20rem;
+            margin: auto; */
+            
+        /* } */ 
+        .glass{
+            /* background-color: brown; */
+            backdrop-filter: blur(50px) ;
+            width: 35vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 65vh;
+            border-radius: 10px;
+            
+        }
+        .container{
+            background: url("../img/bg.jpg");
+            /* background-size:100v 100vw; */
+            /* background-position: center; */
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn{
+            display: block;
+            width: 10em;
+            height: 2em;
+            margin: auto;
+            border-radius: 5px;
+            background-color: #ffe0b3;
+        }
+        h2{
+            text-align: center;
+            margin-bottom: 15px;
+            margin-top: 5px;
+        }
+        input:focus{
+            border-color: #ffbfa3;
+            background-color: rgb(234, 234, 234);
+        }
+        .btn:hover{
+            cursor: pointer;
+            background-color: #fdd6c5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="glass">
+            <div class="formContainer">
+                <h2>Log In</h2>
+                <form action="backend.php">
+                    <label for="email">E-Mail</label>
+                    <input id="email" type="email" placeholder="Enter your E-Mail">
+                    <label for="pass1">Password</label>
+                    <input id="pass1" type="password" placeholder="Enter your Password">
+                    <button class="btn" type="submit">Log in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
