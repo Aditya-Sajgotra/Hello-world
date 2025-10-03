@@ -220,7 +220,7 @@ img{
     height: 10rem;
     width: 16rem;
 }
-.cardUp:hover{
+.cardHover:hover{
     transform:scale(1.08);
     transition:all 0.3s;
 }
