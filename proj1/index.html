@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial;
+        /* border: 2px solid black; */
+      }
+      .head {
+        background: url("./img/bg_main.jpg");
+        height: 100vh;
+        /* z-index: -2; */
+      }
+      .dark {
+        backdrop-filter: brightness(0.6);
+        height: 100vh;
+        /* z-index: -1; */
+      }
+      .color {
+        background-color: rgba(54, 19, 84, 0.6);
+        position: sticky;
+        top: 0;
+      }
+      .logo {
+        height: 10vh;
+        width: auto;
+      }
+      h1 {
+        color: white;
+      }
+      .agency-info {
+        display: flex;
+        align-items: center;
+      }
+      .nav {
+        /* backdrop-filter: blur(50px) ; */
+        /* background: transparent; */
+        position: sticky;
+        display: flex;
+        justify-content: space-between;
+        height: 20vh;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        color: white;
+        padding: 0px 30px;
+        margin: 0px 10px;
+        /* height: 10vh; */
+        /* width: 5vw; */
+        /* border: 2px solid black; */
+      }
+      .nav-btns {
+        display: flex;
+        align-items: center;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+      }
+      .wrapper-nav {
+        width: 75vw;
+        margin: auto;
+      }
+      a {
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      a:hover {
+        /* border-bottom: 2px solid white; */
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .height {
+        text-align: center;
+        font-size: 105px;
+      }
+      #font {
+        font-family: "script";
+        font-size: 90px;
+      }
+      .discover{
+        margin: 50px 0px;
+      }
+      .btn{
+        position: relative;
+        width: 15vw;
+        background: linear-gradient(to right, rgb(203, 165, 29), rgb(158, 57, 189));
+        border-radius: 30px;
+        margin: auto;
+        z-index: 1;
+      }
+      .btn::after{
+        content: '';
+        border: 2px solid white;
+        background: linear-gradient(to left, rgb(203, 165, 29), rgb(158, 57, 189));
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        transition:all 0.4s ease;
+        border-radius: 30px;
+        z-index: -1;
+
+      }
+      .btn:hover::after{
+        opacity: 1;
+
+      }
+      .btn:hover{
+        cursor: pointer;
+      }
+      #explore:hover{
+        text-decoration: none;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <div class="dark">
+        <div class="color">
+          <div class="wrapper-nav">
+            <div class="nav">
+              <div class="agency-info">
+                <img class="logo" src="./img/logo.png" alt="logo" />
+                <h1>TRAVELIX</h1>
+              </div>
+
+              <div class="nav-btns">
+                <ul>
+                  <li><a href="./index.html">Home</a></li>
+                  <li><a href="./html/offers.html">Offers</a></li>
+                  <li><a href="./html/contact.html">Contact</a></li>
+                  <li><a href="./html/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="discover">
+          <h1 class="height">Discover</h1>
+          <h1 class="height" id="font">the world</h1>
+        </div>
+        <div class="btn">
+          <a id="explore" href="">Explore Now</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

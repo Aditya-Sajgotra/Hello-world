@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", ()=> {
     const manual = document.getElementById("manual");
     // console.log(manual.textContent)
-    const writings = ["2nd year student at GCET Jammu", "Doing BTech. in CSE Engineering"];
+    const writings = ["2nd year student at GCET Jammu", "Doing BTech. in Computer Science"];
     let i = 0;
     let j = 0;
     let typeInterval, eraseInterval;
