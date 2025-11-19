@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      td,
+      tr {
+        border: 2px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <!-- <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let table = document.querySelector("table");
+      let tr, td1, td2, td3, n, i,id;
+      i = 1;
+      n = Number(prompt("enter the no. of terms"));
+      function addToTable() {
+          tr = document.createElement("tr");
+          table.appendChild(tr);
+          td1 = document.createElement("td");
+          td2 = document.createElement("td");
+          td3 = document.createElement("td");
+          tr.appendChild(td1);
+          tr.appendChild(td2);
+          tr.appendChild(td3);
+          td1.textContent = i;
+          td2.textContent = i * i;
+          td3.textContent = i * i * i;
+          i++;
+          console.log(`i is  ${i}`)
+          console.log(`n is ${n}`)
+          console.log(i -1 == n)
+          if(i > n ){
+             clearInterval(id);
+          }
+          
+      }
+       id = setInterval(addToTable, 100);
+    });
+  </script> -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let table = document.getElementById("table");
+    //   console.log(table);
+      let tr, td1, td2, td3, i, n;
+
+      n = Number(prompt("Enter the no. of terms"));
+      i = 1;
+
+      function createColumn() {
+        td1 = document.createElement("td");
+        td2 = document.createElement("td");
+        td3 = document.createElement("td");
+      }
+      function createRow() {
+        tr = document.createElement("tr");
+      }
+      function append() {
+        table.appendChild(tr);
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+      }
+      function addText() {
+        td1.textContent = i;
+        td2.textContent = i * i;
+        td3.textContent = i * i * i;
+        i++;
+      }
+      function all() {
+        createRow();
+        createColumn();
+        append();
+        addText();
+        if (i > n) {
+          clearInterval(id);
+        }
+      }
+      let id = setInterval(all, 1000);
+    });
+  </script>
+  <body>
+    <table id="table">
+      <tr>
+        <td>Number</td>
+        <td>Square</td>
+        <td>Cube</td>
+      </tr>
+    </table>
+  </body>
+</html>
