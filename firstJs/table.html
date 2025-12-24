@@ -13,11 +13,11 @@
       }
     </style>
   </head>
-  <!-- <script>
+  <script>
     document.addEventListener("DOMContentLoaded", () => {
       let table = document.querySelector("table");
       let tr, td1, td2, td3, n, i,id;
-      i = 1;
+      i = 0;
       n = Number(prompt("enter the no. of terms"));
       function addToTable() {
           tr = document.createElement("tr");
@@ -42,48 +42,8 @@
       }
        id = setInterval(addToTable, 100);
     });
-  </script> -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      let table = document.getElementById("table");
-    //   console.log(table);
-      let tr, td1, td2, td3, i, n;
-
-      n = Number(prompt("Enter the no. of terms"));
-      i = 1;
-
-      function createColumn() {
-        td1 = document.createElement("td");
-        td2 = document.createElement("td");
-        td3 = document.createElement("td");
-      }
-      function createRow() {
-        tr = document.createElement("tr");
-      }
-      function append() {
-        table.appendChild(tr);
-        tr.appendChild(td1);
-        tr.appendChild(td2);
-        tr.appendChild(td3);
-      }
-      function addText() {
-        td1.textContent = i;
-        td2.textContent = i * i;
-        td3.textContent = i * i * i;
-        i++;
-      }
-      function all() {
-        createRow();
-        createColumn();
-        append();
-        addText();
-        if (i > n) {
-          clearInterval(id);
-        }
-      }
-      let id = setInterval(all, 1000);
-    });
   </script>
+  
   <body>
     <table id="table">
       <tr>

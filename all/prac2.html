@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial;
+      }
+      h1 {
+        text-align: center;
+        padding: 4px 0px;
+      }
+      div {
+        display: flex;
+        width: 30vw;
+        margin: auto;
+        justify-content: center;
+        border: 2px solid black;
+        border-radius: 5px;
+      }
+      form {
+        padding: 10px 0px;
+      }
+      button {
+        width: 10vw;
+        height: 5vh;
+        margin: auto;
+        background-color: rgb(2, 6, 6);
+        color: white;
+        cursor: pointer;
+      }
+      .element {
+        width: 25vw;
+        height: 4vh;
+        padding: 0px 2px;
+        box-sizing: border-box;
+      }
+      .element:focus {
+        background-color: rgb(246, 246, 246);
+      }
+      .box {
+        height: 80px;
+        padding: 4px;
+        box-sizing: border-box;
+      }
+      button:hover {
+        background-color: rgb(83, 83, 83);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>REGISTRATION FORM</h1>
+    <div>
+      <form action="/submit" method="POST">
+        <label for="name"><b>Name</b></label
+        ><br />
+        <input
+          type="text"
+          id="name"
+          class="element"
+          name="name"
+          placeholder="Enter your name" /><br /><br />
+
+        <label for="roll"><b>Roll no</b></label
+        ><br />
+        <input
+          type="number"
+          id="roll"
+          class="element"
+          name="roll"
+          placeholder="Enter your Roll no" /><br /><br />
+
+        <label><b>Gender</b></label
+        ><br />
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label><br />
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label><br /><br />
+
+        <label><b>Liked Courses</b></label
+        ><br />
+        <input
+          type="checkbox"
+          id="web-development"
+          name="course"
+          value="web-development" />
+        <label for="web-development" class="course">Web Development</label
+        ><br />
+
+        <input type="checkbox" id="cpp" name="course" value="cpp" />
+        <label for="cpp" class="course">Object Oriented C++</label><br />
+
+        <input type="checkbox" id="digital" name="course" value="digital" />
+        <label for="digital" class="course">Digital System Design</label
+        ><br /><br />
+
+        <label for="sem"><strong>Course Rating</strong></label
+        ><br />
+        <select class="element" name="sem" id="sem">
+          <option value="">Excellent</option>
+          <option value="">Very Good</option>
+          <option value="">Good</option>
+          <option value="">Poor</option></select
+        ><br /><br />
+
+        <label for="suggestion"><strong>Suggestions</strong></label
+        ><br />
+        <textarea
+          id="suggestion"
+          name="suggestion"
+          class="element box"
+          placeholder="Enter your suggestions"></textarea
+        ><br /><br />
+
+        <button type="submit" class="element">Submit</button><br /><br />
+        <button type="reset" class="element">Reset</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -8,6 +8,9 @@
         *{
             font-family:Arial, Helvetica, sans-serif;
         }
+        p{
+            font-size: 50px;
+        }
     </style>
 </head>
 <body>
@@ -19,28 +22,9 @@
     let p = document.querySelector("p");
     function setTime() {
         t = new Date();
-        p.textContent = t.toLocaleString();
+        p.textContent = `Today's Date is :${t.toLocaleString()}`;
     }
     let id = setInterval(setTime, 1000);
-    // p.style.fontSize = '200px';
-    // console.log(`font size is ${p.style.fontSize}`)
-
-    function textSize() {
-        if (Number(p.style.fontSize.slice(0,-2)) >= 200) {
-            clearInterval(textId)
-            decrease = setInterval(decText, 1)
-        }
-        p.style.fontSize = String(Number(p.style.fontSize.slice(0,-2))+ 1)+"px"
-    }
-    function decText() {
-        if ( Number(p.style.fontSize.slice(0,-2)) <= 20) {
-            clearInterval(decrease)
-            textId = setInterval(textSize, 1)
-        }
-        p.style.fontSize = String(Number(p.style.fontSize.slice(0,-2))- 1)+"px"
-        // console.log(p.style.fontSize)
-    }
-    let textId = setInterval(textSize, 1);
     
 </script>
 </html>
